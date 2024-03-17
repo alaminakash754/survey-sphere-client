@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import { FaFacebook, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
+    let year = new Date().getFullYear()
     return (
         <div className="bg-yellow-50 rounded-xl">
         <footer className="footer mt-5 py-5 footer-center md:flex">
@@ -25,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-        <p className="text-center py-1 bg-base-200">Copyright © 2019 - All right reserved</p>
+        <p className="text-center py-1 bg-base-200">Copyright <span>&#169;</span>  {year} - All right reserved</p>
 
     </div>
     );

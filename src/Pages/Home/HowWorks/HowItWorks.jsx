@@ -14,7 +14,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="space-y-5">
                         <div className="mt-6 grid gap-8 lg:grid-cols-3">
-                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center">
+                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
                                 <div className="rounded-full bg-purple-900 text-white flex items-center font-bold text-xl justify-center w-16 h-16">
                                     1
                                 </div>
@@ -24,7 +24,7 @@ const HowItWorks = () => {
                                 </p>
                             </div>
 
-                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center">
+                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
                                 <div className="rounded-full bg-purple-900 text-white flex items-center font-bold text-xl justify-center w-16 h-16">
                                     2
                                 </div>
@@ -33,7 +33,7 @@ const HowItWorks = () => {
                                     Share surveys with your target audience and seamlessly gather responses.
                                 </p>
                             </div>
-                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center">
+                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
                                 <div className="rounded-full bg-purple-900 text-white flex items-center font-bold text-xl justify-center w-16 h-16">
                                     3
                                 </div>
@@ -42,7 +42,7 @@ const HowItWorks = () => {
                                     Obtain comprehensive analytics and insights from collected responses.
                                 </p>
                             </div>
-                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center">
+                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
                                 <div className="rounded-full bg-purple-900 text-white flex items-center font-bold text-xl justify-center w-16 h-16">
                                     4
                                 </div>
@@ -51,7 +51,7 @@ const HowItWorks = () => {
                                     Tailor and generate detailed reports to suit your specific needs.
                                 </p>
                             </div>
-                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center">
+                            <div className=" card w-full bg-white text-center p-5 shadow-xl flex flex-col items-center transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300">
                                 <div className="rounded-full bg-purple-900 text-white flex items-center font-bold text-xl justify-center w-16 h-16">
                                     5
                                 </div>
