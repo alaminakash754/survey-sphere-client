@@ -3,7 +3,7 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 
 const LatestSurvey = () => {
     return (
-        <div className="mt-14">
+        <div className="mt-14 bg-base-200">
             <SectionTitle heading={"Latest Surveys"} subHeading={"Our latest surveys"}></SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-5">
                 <div className="p-4 border border-r-4 border-b-4 border-purple-500 rounded-md shadow-md bg-white">

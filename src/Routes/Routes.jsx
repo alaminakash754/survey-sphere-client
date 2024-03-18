@@ -9,6 +9,10 @@ import Login from "../Pages/login/Login";
 import SignUp from "../Pages/signUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import UpgradePro from "../Components/upgradePro/UpgradePro";
+import Dashboard from "../Pages/Dashboard/dashboard/Dashboard";
+import SurveyorHome from "../Pages/Dashboard/Surveyor/SurveyorHome";
+import AdminHome from "../Pages/Dashboard/adminHome/AdminHome";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 
   
  export const router = createBrowserRouter([
@@ -35,5 +39,24 @@ import UpgradePro from "../Components/upgradePro/UpgradePro";
         }
       ]
     },
+    {
+      path:'/dashboard',
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      children: [
+        {
+          path:'surveyorHome',
+          element: <SurveyorHome></SurveyorHome>
+        },
+        // admin routes 
+        {
+          path: 'adminHome',
+          element: <AdminHome></AdminHome>
+        },
+        {
+          path: 'users',
+          element: <AllUsers></AllUsers>
+        }
+      ]
+    }
   ]);
   

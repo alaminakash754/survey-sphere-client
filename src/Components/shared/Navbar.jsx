@@ -40,7 +40,7 @@ const Navbar = () => {
             user && <li className="text-purple-600 font-semibold"><Link to='/'>Create Survey</Link></li>
         }
         <li className="bg-gray-50 rounded-full text-black"><Link to="/upgradePro">Upgrade to <span className="text-purple-600 font-bold text-lg">PRO</span></Link></li>
-
+        <li className="text-purple-600 font-semibold"><Link to='/dashboard/users'>Dashboard</Link></li>
 
         {/* {
             user && isAdmin && <li className="text-yellow-600 font-semibold"><Link to='/dashboard/adminHome'>Dashboard</Link></li>
