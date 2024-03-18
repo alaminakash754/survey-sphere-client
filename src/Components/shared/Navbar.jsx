@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import useAdmin from "../Hooks/useAdmin";
+import useSurveyor from "../Hooks/useSurveyor";
 
-// import useAdmin from "../../../../Hooks/useAdmin";
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    // const [isAdmin] = useAdmin();
+    const [isAdmin] = useAdmin();
+    const [isSurveyor] = useSurveyor()
     const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
     const handleToggle = e => {
         if (e.target.checked) {
@@ -34,20 +36,17 @@ const Navbar = () => {
    
     const navLinks = <>
         <li className="text-purple-600 font-semibold"><Link to='/'>Home</Link></li>
-        <li  className="text-purple-600 font-semibold"><Link to='/'>Surveys</Link></li>
+        <li  className="text-purple-600 font-semibold"><Link to='/allSurvey'>Surveys</Link></li>
         <li className="text-purple-600 font-semibold"><Link to='/signup'>Sign Up</Link></li>
-        {
-            user && <li className="text-purple-600 font-semibold"><Link to='/'>Create Survey</Link></li>
-        }
         <li className="bg-gray-50 rounded-full text-black"><Link to="/upgradePro">Upgrade to <span className="text-purple-600 font-bold text-lg">PRO</span></Link></li>
-        <li className="text-purple-600 font-semibold"><Link to='/dashboard/users'>Dashboard</Link></li>
+       
 
-        {/* {
+        {
             user && isAdmin && <li className="text-yellow-600 font-semibold"><Link to='/dashboard/adminHome'>Dashboard</Link></li>
         }
         {
-            user && !isAdmin && <li className="text-yellow-600 font-semibold"><Link to='/dashboard/userHome'>Dashboard</Link></li>
-        } */}
+            user && isSurveyor && <li className="text-yellow-600 font-semibold"><Link to='/dashboard/surveyorHome'>Dashboard</Link></li>
+        }
     </>
 
     return (

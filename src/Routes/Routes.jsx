@@ -13,6 +13,9 @@ import Dashboard from "../Pages/Dashboard/dashboard/Dashboard";
 import SurveyorHome from "../Pages/Dashboard/Surveyor/SurveyorHome";
 import AdminHome from "../Pages/Dashboard/adminHome/AdminHome";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import AdminRoute from "./AdminRoute";
+import CreateSurvey from "../Pages/createSurvey/CreateSurvey";
+import AllSurveys from "../Pages/surveys/AllSurveys";
 
   
  export const router = createBrowserRouter([
@@ -36,6 +39,10 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
         {
           path: 'upgradePro',
           element:<PrivateRoute><UpgradePro></UpgradePro></PrivateRoute>
+        },
+        {
+          path:'allSurvey',
+          element:<AllSurveys></AllSurveys>
         }
       ]
     },
@@ -47,14 +54,18 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
           path:'surveyorHome',
           element: <SurveyorHome></SurveyorHome>
         },
+        {
+          path:'createSurvey',
+          element: <CreateSurvey></CreateSurvey>
+        },
         // admin routes 
         {
           path: 'adminHome',
-          element: <AdminHome></AdminHome>
+          element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
         },
         {
           path: 'users',
-          element: <AllUsers></AllUsers>
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
         }
       ]
     }
