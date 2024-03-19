@@ -20,7 +20,7 @@ const UpgradePro = () => {
                     <div className=" border-t-8 border-t-pink-600 card w-full bg-white text-center p-5 shadow-xl space-y-5 items-center">
                         <p>3 years Pro</p>
                         <p>$ <span className="font-bold text-4xl">299</span></p>
-                        <Link to="/dashboard/payment"><button className="btn btn-secondary">Upgrade Now!</button></Link>
+                        <Link to="/payment"><button className="btn btn-secondary">Upgrade Now!</button></Link>
                         <p className="text-gray-600 border-b-2 mt-2">
                             able to vote surveys
                         </p>

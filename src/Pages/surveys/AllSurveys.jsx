@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import useSurveys from "../../Components/Hooks/useSurveys";
-import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+
 import SurveyCard from "./SurveyCard";
 
 
@@ -11,12 +11,15 @@ const AllSurveys = () => {
     return (
         <div>
             <div >
-             <Helmet><title>Survey Sphere | Surveys</title></Helmet>
-            <SectionTitle className="top-20" heading={"All Surveys is Here"} subHeading={"Online Survey"}></SectionTitle>
-            {
-                surveys.map(survey => <SurveyCard className='' key={survey._id} survey={survey}></SurveyCard>)
-            }
-        </div>
+                <Helmet><title>Survey Sphere | Surveys</title></Helmet>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-2' >
+
+                    {
+                        surveys.map(survey => <SurveyCard key={survey._id} survey={survey}></SurveyCard>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };

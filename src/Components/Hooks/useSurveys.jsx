@@ -11,7 +11,7 @@ const useSurveys = () => {
             setSurvey(data);
             setLoading(false);
         })
-    } ,[])
+    } ,[survey])
     return [survey, loading]
 };
 

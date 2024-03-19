@@ -16,6 +16,11 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import CreateSurvey from "../Pages/createSurvey/CreateSurvey";
 import AllSurveys from "../Pages/surveys/AllSurveys";
+import SurveyDetails from "../Pages/surveys/SurveyDetails";
+import SurveyList from "../Pages/Dashboard/Surveyor/SurveyList";
+import Payment from "../Pages/surveys/Payment";
+import UpdateSurvey from "../Pages/Dashboard/Surveyor/UpdateSurvey";
+// import MySurvey from "../Pages/surveys/MySurvey";
 
   
  export const router = createBrowserRouter([
@@ -36,6 +41,10 @@ import AllSurveys from "../Pages/surveys/AllSurveys";
           path: 'signup',
           element: <SignUp></SignUp>
         },
+        // {
+        //   path:'mySurvey',
+        //   element: <MySurvey></MySurvey>
+        // },
         {
           path: 'upgradePro',
           element:<PrivateRoute><UpgradePro></UpgradePro></PrivateRoute>
@@ -43,7 +52,16 @@ import AllSurveys from "../Pages/surveys/AllSurveys";
         {
           path:'allSurvey',
           element:<AllSurveys></AllSurveys>
-        }
+        },
+        {
+          path:'/surveyDetails/:id',
+          element:<PrivateRoute><SurveyDetails></SurveyDetails></PrivateRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/surveyDetails/${params.id}`)
+        },
+        {
+          path: 'payment',
+          element:<PrivateRoute><Payment></Payment></PrivateRoute>
+        },
       ]
     },
     {
@@ -58,6 +76,16 @@ import AllSurveys from "../Pages/surveys/AllSurveys";
           path:'createSurvey',
           element: <CreateSurvey></CreateSurvey>
         },
+        {
+          path:'surveyList',
+          element: <SurveyList></SurveyList>
+        },
+        {
+          path: 'updateSurvey/:id',
+          element: <UpdateSurvey></UpdateSurvey>,
+          loader: ({params}) => fetch(`http://localhost:5000/surveys/${params.id}`)
+        },
+        
         // admin routes 
         {
           path: 'adminHome',

@@ -2,7 +2,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import useAuth from "../../../Components/Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
 import useAdmin from "../../../Components/Hooks/useAdmin";
-import { FaHome, FaList, FaListAlt, FaSignOutAlt, FaUsers } from "react-icons/fa";
+import { FaHome, FaList,  FaSignOutAlt, FaUsers } from "react-icons/fa";
 import { FcSalesPerformance } from "react-icons/fc";
 
 
@@ -50,7 +50,7 @@ const Dashboard = () => {
                                 :
                                 <>
                                     <li>
-                                        <NavLink to='/dashboard/userHome'>
+                                        <NavLink to='/dashboard/SurveyorHome'>
                                             <FaHome></FaHome> Surveyor Home
                                         </NavLink>
                                     </li>
@@ -60,10 +60,7 @@ const Dashboard = () => {
                                         </NavLink>
                                     </li>
 
-                                    <li>
-                                        <NavLink to='/dashboard/pollingList'><FaListAlt></FaListAlt> Polling Attendence
-                                        </NavLink>
-                                    </li>
+                                   
                                     
                                 </>
                         }
