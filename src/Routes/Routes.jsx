@@ -57,7 +57,7 @@ import Payments from "../Pages/Dashboard/adminHome/Payments";
         {
           path:'surveyDetails/:id',
           element:<PrivateRoute><SurveyDetails></SurveyDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/surveyDetails/${params.id}`)
+          loader: ({params}) => fetch(`https://survey-sphere-server-drab.vercel.app/surveyDetails/${params.id}`)
         },
         {
           path: 'payment',
@@ -84,7 +84,7 @@ import Payments from "../Pages/Dashboard/adminHome/Payments";
         {
           path: 'updateSurvey/:id',
           element: <UpdateSurvey></UpdateSurvey>,
-          loader: ({params}) => fetch(`http://localhost:5000/surveys/${params.id}`)
+          loader: ({params}) => fetch(`https://survey-sphere-server-drab.vercel.app/surveys/${params.id}`)
         },
         
         // admin routes 
