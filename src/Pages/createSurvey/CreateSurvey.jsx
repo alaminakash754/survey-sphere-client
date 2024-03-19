@@ -19,7 +19,7 @@ const CreateSurvey = () => {
         
             const storeItem = {
                 surveyName: data.name,
-                surveyInfo: data.description,
+                description: data.description,
                 category: data.category, 
                 ownerName: data.displayName,
             }
@@ -44,7 +44,7 @@ const CreateSurvey = () => {
             <Helmet><title>Survey Sphere | Create A New Survey</title></Helmet>
             <SectionTitle heading='Create A New Survey' subHeading='Survey Sphere '></SectionTitle>
             
-            <div className="w-3/4 mx-auto bg-purple-50 mt-2">
+            <div className="w-5/6 mx-auto bg-purple-50 mt-2">
                 <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-control w-full mb-5">

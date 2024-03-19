@@ -20,6 +20,7 @@ import SurveyDetails from "../Pages/surveys/SurveyDetails";
 import SurveyList from "../Pages/Dashboard/Surveyor/SurveyList";
 import Payment from "../Pages/surveys/Payment";
 import UpdateSurvey from "../Pages/Dashboard/Surveyor/UpdateSurvey";
+import Payments from "../Pages/Dashboard/adminHome/Payments";
 // import MySurvey from "../Pages/surveys/MySurvey";
 
   
@@ -54,7 +55,7 @@ import UpdateSurvey from "../Pages/Dashboard/Surveyor/UpdateSurvey";
           element:<AllSurveys></AllSurveys>
         },
         {
-          path:'/surveyDetails/:id',
+          path:'surveyDetails/:id',
           element:<PrivateRoute><SurveyDetails></SurveyDetails></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/surveyDetails/${params.id}`)
         },
@@ -65,7 +66,7 @@ import UpdateSurvey from "../Pages/Dashboard/Surveyor/UpdateSurvey";
       ]
     },
     {
-      path:'/dashboard',
+      path:'dashboard',
       element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children: [
         {
@@ -94,6 +95,10 @@ import UpdateSurvey from "../Pages/Dashboard/Surveyor/UpdateSurvey";
         {
           path: 'users',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+        {
+          path: 'payments',
+          element:<Payments></Payments>
         }
       ]
     }

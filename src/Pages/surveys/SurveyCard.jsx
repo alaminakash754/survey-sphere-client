@@ -5,7 +5,7 @@ import { AiFillDislike } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const SurveyCard = ({ survey }) => {
-    const { surveyName, surveyInfo, category,_id } = survey;
+    const { surveyName, description, category,_id } = survey;
     return (
 
         <>
@@ -14,7 +14,7 @@ const SurveyCard = ({ survey }) => {
                     <div className="card-body">
                         <h2 className="card-title">{surveyName}</h2>
                         <p>{category}</p>
-                        <h2>{surveyInfo}</h2>
+                        <h2>{description}</h2>
                         <h2>Total Voted: 0</h2>
                         <div className="flex gap-10 mb-4">
                             <AiFillLike className="text-2xl"></AiFillLike> <p>0</p>

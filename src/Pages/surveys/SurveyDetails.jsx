@@ -12,8 +12,8 @@ import useSurveyor from "../../Components/Hooks/useSurveyor";
 const SurveyDetails = () => {
     const [surveyor] = useSurveyor();
     const surveyDetails = useLoaderData();
-    const { surveyName, surveyInfo, category } = surveyDetails;
-    console.log(surveyName, surveyInfo, category);
+    const { surveyName, description, category } = surveyDetails;
+    // console.log(surveyName, surveyInfo, category);
 
     const [vote, setVote] = useState(0);
     const [disabledVote, setDisabledVote] = useState(false);
@@ -35,7 +35,7 @@ const SurveyDetails = () => {
             <div className="p-4 border border-r-4 border-b-4 border-purple-500 rounded-md shadow-md bg-purple-100 space-y-4">
                 <h1 className="text-xl font-semibold mb-2">{surveyName}</h1>
                 <p className="text-purple-500 mb-4">{category}</p>
-                <h4 className="mb-4">{surveyInfo}
+                <h4 className="mb-4">{description}
 
                 </h4>
                 <div className="flex gap-2">

@@ -9,7 +9,7 @@ import useAuth from "../../../Components/Hooks/useAuth";
 
 const UpdateSurvey = () => {
     const updateSurvey = useLoaderData();
-    const {surveyName, surveyInfo, category, _id} = updateSurvey;
+    const {surveyName, description, category, _id} = updateSurvey;
     const axiosSecure = useAxiosSecure();
     const {user} = useAuth()
    
@@ -19,13 +19,13 @@ const UpdateSurvey = () => {
         
             const updateItem = {
                 surveyName: data.name,
-                surveyInfo: data.description,
+                description: data.description,
                 category: data.category, 
                 ownerName: data.displayName,
             }
-            const surveyRes = await axiosSecure.patch(`/surveys/${_id}`, updateItem);
-            console.log(surveyRes.data);
-            if(surveyRes.data.modifiedCount > 0){
+            const updateSurveyRes = await axiosSecure.patch(`/surveys/${_id}`, updateItem);
+            console.log(updateSurveyRes.data);
+            if(updateSurveyRes.data.modifiedCount > 0){
                 // shop success popup 
                 reset();
                
@@ -62,7 +62,7 @@ const UpdateSurvey = () => {
                     <label className="label">
                         <span className="label-text">Survey Description</span>
                     </label>
-                    <textarea {...register('description', { required: true })} className="textarea textarea-bordered h-24" defaultValue={surveyInfo} placeholder="Survey Description"></textarea>
+                    <textarea {...register('description', { required: true })} className="textarea textarea-bordered h-24" defaultValue={description} placeholder="Survey Description"></textarea>
                 </div>
                 {/* category  */}
                 <div className="form-control w-full mb-5">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const SurveyorListCard = ({survey}) => {
-    const { surveyName, surveyInfo, category, _id } = survey;
+    const { surveyName, description, category, _id } = survey;
     return (
         <>
         
@@ -11,7 +11,7 @@ const SurveyorListCard = ({survey}) => {
             <div className="card-body">
                 <h2 className="card-title">{surveyName}</h2>
                 <p>{category}</p>
-                <h2>{surveyInfo}</h2>
+                <h2>{description}</h2>
                 <div className="flex gap-5">
                     <div className="form-control">
                         <label className="label cursor-pointer">
